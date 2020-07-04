@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Note, PersonalNote
+from .models import Note, PersonalNote, EEG_Device, Employee
 
 class NoteAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'last_modified')
@@ -8,3 +8,5 @@ class NoteAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Note, NoteAdmin)
 admin.site.register(PersonalNote, NoteAdmin)
+admin.site.register(EEG_Device)
+admin.site.register(Employee)

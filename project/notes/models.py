@@ -11,3 +11,11 @@ class Note(models.Model):
 
 class PersonalNote(Note):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class EEG_Device(models.Model):
+    brand_name = models.CharField(max_length=200)
+    num_channels = models.IntegerField()
+
+class Employee(models.Model):
+    name = models.CharField(max_length=200)
+    department = models.CharField(max_length=200)
